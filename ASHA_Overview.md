@@ -11,20 +11,26 @@ By combining bare-metal syntax formatting, abstract syntax tree (AST) structural
 The architecture executes code mapping through a structured five-stage pipeline to achieve relational integrity and isolate coordinate drift.
 
 ```
-flowchart TD
-    A["<b>1. NORMALIZATION GATE</b><br><br>• Windows CRLF → Unix LF<br>• Per-line trailing trim<br>• Subprocess Deno native Rust formatting (deno fmt)"] 
-    B["<b>2. RELATIONAL INGESTION</b><br><br>• Generate core modules relational anchor map<br>• Commit baseline historical snapshot (3NF schema layout)"] 
-    C["<b>3. VECTOR ATOMIZATION</b><br><br>• Stream content arrays into public.asha_lines<br>• Calculate indentation depth metrics and text SHA-256"] 
-    D["<b>4. STRUCTURAL BLOCK ASSEMBLER</b><br><br>• Invoke TS-Morph AST crawler to detect syntax boundaries<br>• Deconstruct lines into unique content-addressed blocks"] 
-    E["<b>5. WORKSPACE DRIFT ENGINE</b><br><br>• Match active structures with proposed AI inputs<br>• Output surgical change instructions (MATCH/MODIFY/INSERT)"]
+1. NORMALIZATION GATE                   
+- Windows CRLF -> Unix LF   - Per-line trailing trim       
+- Subprocess Deno native Rust formatting (deno fmt)        
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
 
-    classDef step fill:#1e3a8a, stroke:#60a5fa, stroke-width:2px, color:#fff, font-family:monospace, radius:8px
-    class A,B,C,D,E step
+2. RELATIONAL INGESTION                   
+- Generate core modules relational anchor map             
+- Commit baseline historical snapshot (3NF schema layout)  
+
+3. VECTOR ATOMIZATION
+- Stream content arrays into public.asha_lines
+- Calculate indentation depth metrics and text SHA-256
+
+4. STRUCTURAL BLOCK ASSEMBLER
+- Invoke TS-Morph AST crawler to detect syntax boundaries
+- Deconstruct lines into unique content-addressed blocks
+
+5. WORKSPACE DRIFT ENGINE|
+- Match active structures with proposed AI inputs
+- Output surgical change instructions (MATCH/MODIFY/INSERT)
 
 ```
 
