@@ -1,4 +1,4 @@
-## Architectural Concept
+## **Atomic Skeletal Hash Architecture (ASHA)** 
 
 The **Atomic Skeletal Hash Architecture (ASHA)** is a sovereign, database-backed code ingestion and drift analysis engine designed to optimize how AI systems interact with source code. Rather than treating code as a fluid blob of text or a fragile sequence of absolute line numbers, ASHA converts source code into a stateful, content-addressed, multi-tiered cryptographic space.
 
